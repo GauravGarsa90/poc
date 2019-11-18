@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gaurav Garsa",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-bundle": "^1.2.5",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^5.12.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.571.0"
+  }
 }

@@ -1,0 +1,8 @@
+{
+    "body": "{\"name\":\"gaurav\",\"age\":\"29\"}",
+    "requestContext": {
+      "identity": {
+        "cognitoIdentityId": "USER-SUB-1234"
+      }
+    }
+  }
