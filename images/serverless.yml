@@ -37,7 +37,6 @@ provider:
   stage: dev
   environment:
     tableName: ${self:custom.tableName}
-    stripeSecretKey: ${env:STRIPE_SECRET_KEY}
   iamRoleStatements:
     - Effect: Allow
       Action:
