@@ -1,0 +1,23 @@
+#
+# Layer: module-libs
+#
+service: helpers-nodex
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: ${opt:stage, 'dev'}
+  profile: ${opt:profile, self:provider.stage, 'dev'}
+  region: ${opt:region, 'ap-southeast-1'}
+  deploymentBucket:
+    name: ggarsa-${self:provider.stage}-deploys
+    serverSideEncryption: AES256
+
+layers:
+  libs:
+    path: './'
+    name: ${self:service}-${self:provider.stage}
+    description: helpers layer
+    compatibleRuntimes:
+      - nodejs10.x
+    retain: true

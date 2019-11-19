@@ -94,7 +94,9 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
-  get:
+    layers:
+      - ${self:custom.layers.${self:provider.stage}.libs}
+  get-all:
     handler: list.main
     events:
       - http:
@@ -102,6 +104,8 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
+    layers:
+      - ${self:custom.layers.${self:provider.stage}.libs}
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
