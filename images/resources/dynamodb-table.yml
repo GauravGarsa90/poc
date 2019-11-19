@@ -6,12 +6,6 @@ Resources:
       AttributeDefinitions:
         - AttributeName: userId
           AttributeType: S
-        - AttributeName: imageUrl
-          AttributeType: S
-        - AttributeName: name
-          AttributeType: S
-        - AttributeName: age
-          AttributeType: N
         - AttributeName: createdAt
           AttributeType: S
       KeySchema:
