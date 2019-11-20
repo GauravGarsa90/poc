@@ -4,7 +4,8 @@
   "description": "",
   "main": "create.js",
   "dependencies": {
-    "aws-sdk": "^2.575.0"
+    "aws-sdk": "^2.575.0",
+    "file-type": "^12.4.0"
   },
   "devDependencies": {},
   "scripts": {

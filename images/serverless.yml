@@ -10,6 +10,7 @@ provider:
   stage: dev
   environment:
     tableName: ${self:custom.tableName}
+    bucket: ggarsa-${self:provider.stage}-deploy
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -26,7 +27,6 @@ provider:
 plugins:
   - serverless-bundle # Package our functions with Webpack
   - serverless-offline
-  - serverless-dotenv-plugin # Load .env as environment variables
 
 functions:
   create:
