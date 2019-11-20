@@ -1,6 +1,6 @@
 import { dynamodb, response } from "helpers";
 var { success, failure } = response;
-var dynamoDbLib = dynamodb
+var dynamoDbLib = dynamodb;
 
 export async function main(event, context) {
   const params = {
