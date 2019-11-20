@@ -1,7 +1,5 @@
 // import * as helpers from 'helpers';
 const helpers = require('helpers');
-var { success, failure } = helpers.response;
-var dynamoDbLib = helpers.dynamoDbLib;
 
 export async function main(event, context, callback) {
   // Request body is passed in as a JSON encoded string in 'event.body'
@@ -19,9 +17,9 @@ export async function main(event, context, callback) {
   };
 
   try {
-    await dynamoDbLib.call("put", params);
-    return success(params.Item);
+    await helpers.dynamoDbLib.call("put", params);
+    return helper.response.success(params.Item);
   } catch (e) {
-    return failure({ status: false });
+    return helper.response.failure({ status: false });
   }
 }

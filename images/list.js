@@ -1,7 +1,5 @@
 // import { dynamodb, response } from 'helpers';
 const helpers = require('helpers');
-var { success, failure } = response;
-var dynamoDbLib = dynamodb;
 
 export async function main(event, context) {
   const params = {
@@ -19,10 +17,10 @@ export async function main(event, context) {
   };
 
   try {
-    const result = await dynamoDbLib.call("query", params);
+    const result = await helpers.dynamoDbLib.call("query", params);
     // Return the matching list of items in response body
-    return success(result.Items);
+    return helpers.response.success(result.Items);
   } catch (e) {
-    return failure({ status: false });
+    return helpers.response.failure({ status: false });
   }
 }
