@@ -1,4 +1,4 @@
-import { dynamodb, response } from "helpers";
+import { dynamodb, response } from 'helpers';
 var { success, failure } = response;
 var dynamoDbLib = dynamodb;
 
