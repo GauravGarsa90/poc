@@ -5,7 +5,6 @@
   "main": "create.js",
   "dependencies": {
     "aws-sdk": "^2.575.0",
-    "helpers": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
