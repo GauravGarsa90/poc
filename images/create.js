@@ -1,5 +1,5 @@
-import * as dynamoDbLib from "./libs/dynamodb-lib";
-import { success, failure } from "./libs/response-lib";
+import * as dynamoDbLib from "dynamodb-lib";
+import { success, failure } from "response-lib";
 
 export async function main(event, context, callback) {
   // Request body is passed in as a JSON encoded string in 'event.body'
