@@ -19,7 +19,7 @@ provider:
 
 layers:
   helpers:
-    path: './nodejs'
+    path: './'
     name: ${self:service}-${self:provider.stage}
     description: helpers layer
     compatibleRuntimes:
