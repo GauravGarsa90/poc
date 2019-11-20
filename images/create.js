@@ -1,6 +1,6 @@
-import { dynamodb, response } from "helpers";
-var { success, failure } = response;
-var dynamoDbLib = dynamodb;
+import * as helpers from "helpers";
+var { success, failure } = helpers.response;
+var dynamoDbLib = helpers.dynamoDbLib;
 
 export async function main(event, context, callback) {
   // Request body is passed in as a JSON encoded string in 'event.body'
