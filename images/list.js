@@ -1,6 +1,6 @@
-import * as dynamoDbLib from ".dynamodb-lib";
-
-import { success, failure } from ".response-lib";
+import { dynamodb, response } from "helpers";
+var { success, failure } = response;
+var dynamoDbLib = dynamodb
 
 export async function main(event, context) {
   const params = {
