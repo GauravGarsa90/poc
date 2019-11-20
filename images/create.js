@@ -18,8 +18,8 @@ export async function main(event, context, callback) {
 
   try {
     await helpers.dynamoDbLib.call("put", params);
-    return helper.response.success(params.Item);
+    return helpers.response.success(params.Item);
   } catch (e) {
-    return helper.response.failure({ status: false });
+    return helpers.response.failure({ status: false });
   }
 }
