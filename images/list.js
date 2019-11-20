@@ -1,6 +1,5 @@
-import * as helpers from './helpers';
-var { success, failure } = helpers.response;
-var dynamoDbLib = helpers.dynamoDbLib;
+import * as dynamoDbLib from './helpers/dynamodb-lib';
+import { success, failure } from './helpers/response-lib';
 
 export async function main(event, context) {
   const params = {
