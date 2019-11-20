@@ -48,7 +48,7 @@ functions:
           cors: true
           authorizer: aws_iam
     layers:
-      - ${cf:helpers-nodex-${self:provider.stage}.HelpersLayerExport}
+      - ${cf:helpers-nodex-${self:provider.stage}.LibsLambdaLayerQualifiedArn}
 
 resources:
   - ${file(resources/dynamodb-table.yml)}
