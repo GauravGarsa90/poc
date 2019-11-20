@@ -1,5 +1,5 @@
 // import { dynamodb, response } from 'helpers';
-const helpers = require('helpers')
+const helpers = require('helpers');
 var { success, failure } = response;
 var dynamoDbLib = dynamodb;
 
