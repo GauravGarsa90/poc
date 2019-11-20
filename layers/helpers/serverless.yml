@@ -20,10 +20,17 @@ provider:
       Resource: "arn:aws:s3:::${self:custom.bucket}/*"
 
 layers:
-  libs:
+  helpers:
     path: './'
     name: ${self:service}-${self:provider.stage}
     description: helpers layer
     compatibleRuntimes:
       - nodejs10.x
     retain: true
+resources:
+  Outputs:
+    HelpersLayerExport:
+        Value:
+          Ref: HelpersLambdaLayer
+        Export:
+          Name: HelpersLambdaLayer

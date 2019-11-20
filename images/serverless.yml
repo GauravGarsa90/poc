@@ -3,8 +3,6 @@ service: images
 custom:
   stage: ${opt:stage, self:provider.stage}
   tableName: ${self:custom.stage}-users
-  layers: &layers
-    ${file(./serverless-layers.yml)}
 
 provider:
   name: aws
@@ -40,7 +38,7 @@ functions:
           cors: true
           authorizer: aws_iam
     layers:
-      - ${self:custom.layers.${self:provider.stage}.helpers}
+      - ${cf:helpers-nodex-${self:provider.stage}.HelpersLayerExport}
   get-all:
     handler: list.main
     events:
@@ -50,7 +48,7 @@ functions:
           cors: true
           authorizer: aws_iam
     layers:
-      - ${self:custom.layers.${self:provider.stage}.libs}
+      - ${cf:helpers-nodex-${self:provider.stage}.HelpersLayerExport}
 
 resources:
   - ${file(resources/dynamodb-table.yml)}
