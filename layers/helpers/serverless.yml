@@ -10,7 +10,6 @@ provider:
   name: aws
   runtime: nodejs10.x
   stage: ${opt:stage, 'dev'}
-  profile: ${opt:profile, self:provider.stage, 'dev'}
   region: ${opt:region, 'ap-southeast-1'}
   iamRoleStatements:
     - Effect: Allow
@@ -26,4 +25,4 @@ layers:
     description: helpers layer
     compatibleRuntimes:
       - nodejs10.x
-    retain: true
+    retain: false
