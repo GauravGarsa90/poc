@@ -1,5 +1,6 @@
-// import { dynamodb, response } from 'helpers';
-const helpers = require('helpers');
+import * as helpers from './helpers';
+var { success, failure } = helpers.response;
+var dynamoDbLib = helpers.dynamoDbLib;
 
 export async function main(event, context) {
   const params = {
