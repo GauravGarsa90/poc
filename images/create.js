@@ -1,4 +1,5 @@
-import * as helpers from 'helpers';
+// import * as helpers from 'helpers';
+const helpers = require('helpers')
 var { success, failure } = helpers.response;
 var dynamoDbLib = helpers.dynamoDbLib;
 
