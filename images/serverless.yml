@@ -3,6 +3,8 @@ service: images
 custom:
   stage: ${opt:stage, self:provider.stage}
   tableName: ${self:custom.stage}-users
+  layers: &layers
+    ${file(./serverless-layers.yml)}
 
 provider:
   name: aws

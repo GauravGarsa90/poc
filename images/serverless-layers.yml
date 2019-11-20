@@ -1,0 +1,5 @@
+
+default: &defaultLayers
+  libs: ${cf:layers-helpers-nodex-${self:provider.stage}.helpersLambdaLayerQualifiedArn}
+dev: &devLayers
+  <<: *defaultLayers
