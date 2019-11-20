@@ -25,3 +25,10 @@ layers:
     compatibleRuntimes:
       - nodejs10.x
     retain: false
+resources:
+  Outputs:
+    HelpersLayerExport:
+        Value:
+          Ref: HelpersLambdaLayer
+        Export:
+          Name: HelpersLambdaLayer
