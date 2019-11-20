@@ -40,7 +40,7 @@ functions:
           cors: true
           authorizer: aws_iam
     layers:
-      - ${self:custom.layers.${self:provider.stage}.libs}
+      - ${self:custom.layers.${self:provider.stage}.helpers}
   get-all:
     handler: list.main
     events:

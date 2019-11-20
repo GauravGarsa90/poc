@@ -3,12 +3,21 @@
 #
 service: helpers-nodex
 
+custom:
+  bucket: ggarsa-${self:provider.stage}-deploy
+
 provider:
   name: aws
   runtime: nodejs10.x
   stage: ${opt:stage, 'dev'}
   profile: ${opt:profile, self:provider.stage, 'dev'}
   region: ${opt:region, 'ap-southeast-1'}
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+        - s3:GetObject
+      Resource: "arn:aws:s3:::${self:custom.bucket}/*"
 
 layers:
   libs:
