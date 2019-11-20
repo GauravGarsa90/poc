@@ -10,7 +10,7 @@ provider:
   profile: ${opt:profile, self:provider.stage, 'dev'}
   region: ${opt:region, 'ap-southeast-1'}
   deploymentBucket:
-    name: ggarsa-${self:provider.stage}-deploys
+    name: ggarsa-${self:provider.stage}-deploy
     serverSideEncryption: AES256
 
 layers:

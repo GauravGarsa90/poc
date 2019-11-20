@@ -10,6 +10,9 @@ provider:
   stage: dev
   environment:
     tableName: ${self:custom.tableName}
+  deploymentBucket:
+    name: ggarsa-${self:provider.stage}-deploy
+    serverSideEncryption: AES256
   iamRoleStatements:
     - Effect: Allow
       Action:
